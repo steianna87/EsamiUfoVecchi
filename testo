@@ -1,0 +1,34 @@
+
+03FYZ – Tecniche di programmazione
+Simulazione prova d’esame – new_ufo_sightings
+
+Si consideri il database “new_ufo_sightings”, contenente informazioni su oltre 80.000 avvistamenti di presunti UFO tra
+il 1910 ed il 2014. Il database contiene dati relativi agli avvistamenti negli Stati Uniti ed è strutturato secondo il
+diagramma ER della pagina seguente. Nel database è contenuta anche l’informazione sui confini tra i diversi stati USA.
+
+Si intende costruire un’applicazione che permetta di interrogare tale base dati. L’applicazione dovrà svolgere le
+seguenti funzioni:
+
+PUNTO 1
+Creazione del Grafo di Avvistamenti:
+Permettere all’utente di scegliere da un menù a tendina uno stato tra tutti i possibili stati in cui ci sono stati
+avvistamenti.
+Permettere all’utente di scegliere da un menù a tendina una forma tra tutte le possibili forme di avvistamenti presenti
+nel database.
+Facendo clic sul bottone CREA GRAFO, creare un grafo semplice, pesato e non orientato, i cui vertici siano tutte le
+città dello stato selezionato.
+Un arco collega due città solo se c'è stato almeno un avvistamento della forma selezionata in entrambe le città nello
+stesso anno.
+Il peso dell’arco viene calcolato come il numero di avvistamenti che hanno la stessa forma selezionata, e che si sono
+verificati nello stesso anno, nelle due città considerate.
+Stampare per ogni città la somma dei pesi degli archi adiacenti.
+
+PUNTO 2
+Algoritmo Ricorsivo per Contare Avvistamenti:
+Implementare un algoritmo ricorsivo che, dato un anno e una forma di avvistamento selezionati dall'utente, conti il
+numero totale di avvistamenti che si sono verificati in tutti gli stati confinanti a partire da uno stato iniziale
+scelto dall'utente.
+Alla pressione del bottone “Conta Avvistamenti”, avviare l’algoritmo di ricerca.
+Stampare a video il numero totale di avvistamenti conteggiati.
+Hint: Per il calcolo, utilizzare i campi "state", "shape" e "datetime" del database e la tabella "neighbor" per
+determinare gli stati confinanti.
