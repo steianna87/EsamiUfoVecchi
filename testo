@@ -1,0 +1,36 @@
+
+03FYZ – Tecniche di programmazione
+Simulazione prova d’esame – new_ufo_sightings
+
+Si consideri il database “new_ufo_sightings”, contenente informazioni su oltre 80.000 avvistamenti di presunti UFO tra
+il 1910 ed il 2014. Il database contiene dati relativi agli avvistamenti negli Stati Uniti ed è strutturato secondo il
+diagramma ER fornito. Nel database è contenuta anche l’informazione sui confini tra i diversi stati USA.
+
+Si intende costruire un’applicazione che permetta di interrogare tale base dati. L’applicazione dovrà svolgere le
+seguenti funzioni:
+
+PUNTO 1
+Creazione del Grafo degli Avvistamenti per Forma e Anno:
+Permettere all’utente di scegliere da un menù a tendina una forma tra tutte le possibili forme di avvistamenti presenti
+nel database.
+Permettere all’utente di scegliere da un menù a tendina un anno tra tutti i possibili anni in cui ci sono stati
+avvistamenti.
+Creare un grafo semplice, pesato e non orientato, i cui vertici siano tutte le città in cui ci sono stati avvistamenti
+della forma selezionata nell'anno selezionato.
+Un arco collega due città solo se ci sono stati avvistamenti della forma selezionata in entrambe le città nello stesso
+mese dell'anno selezionato.
+Il peso dell’arco viene calcolato come la somma del numero di avvistamenti della forma selezionata nelle due città
+nello stesso mese.
+Stampare per ogni città la somma dei pesi degli archi adiacenti.
+
+PUNTO 2
+Algoritmo Ricorsivo per il Percorso con Vincoli di Distanza e Peso:
+Implementare un algoritmo ricorsivo che, dato il grafo creato nel punto 1, trovi il percorso massimo che parte da una
+città iniziale scelta dall'utente, con i seguenti vincoli:
+Il percorso deve avere una distanza totale massima di D (impostato dall'utente).
+Il peso degli archi deve essere in ordine crescente.
+Il percorso deve passare attraverso un numero minimo di città (impostato dall'utente).
+Alla pressione del bottone “Trova Percorso con Vincoli di Distanza e Peso”, avviare l’algoritmo di ricerca.
+Stampare a video il percorso trovato con la distanza totale e il peso totale del percorso.
+Hint: Utilizzare una funzione ricorsiva che visiti le città e tenga traccia delle città già visitate, della distanza
+accumulata, del peso accumulato e del numero di città visitate.
